@@ -1,0 +1,2 @@
+# 2025-EWHA-CAPSTONE-DROPTHE8BIT
+2025-1 캡스톤디자인과창업프로젝트 8팀
