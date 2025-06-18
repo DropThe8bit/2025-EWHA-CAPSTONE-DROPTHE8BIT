@@ -15,7 +15,7 @@
   
     - [EverTale_AI](https://github.com/DropThe8bit/EverTale_AI) : 아이 그림을 기반으로 캐릭터 구현 및 AI 스토리 생성, 음성 복제 로직
     - [EverTale_FE](https://github.com/DropThe8bit/EverTale_FE) : 사용자 인터페이스 및 동화 생성 기능을 제공하는 프론트엔드
-    - [EverTale_BE](https://github.com/DropThe8bit/EverTale_BE) : 사용자 인증, 동화/캐릭터/미션 관리 등의 백엔드 API 및 데이터베이스 처리
+    - [EverTale_BE](https://github.com/DropThe8bit/EverTale_BE) : 사용자 인증, 동화/캐릭터/퀴즈 관리 등의 백엔드 API 및 데이터베이스 처리
 
 ---
 ## 🛠️ 프로젝트 Convention
