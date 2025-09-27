@@ -24,7 +24,8 @@
 | 항목 | 내용 |
 | --- | --- |
 | (1) 요구사항 정의 | 1. 기능별 상세 요구사항(또는 유스케이스)<br><br> 2. 설계 모델(클래스 다이어그램, 클래스 및 모듈 명세서) <br> 3. UI 분석/설계 모델 <br> 4. E-R 다이어그램/DB 설계 모델(테이블 구조) |
-| (2) 전체 시스템 구성 | 시스템 구조도 <br> 1) Front-End <br> - React로 웹페이지를 제작하고 언어는 JavaScript를 사용한다. <br> - 용이한 라우팅을 위해 React-Router로 백엔드와 API 통신을 한다. <br><br> 2) Back-End <br><br> 3) AI <br> - AI 시스템은 Python 언어와 Numpy 기반으로 개발되었다.<br> - 프론트엔드에서 업로드된 이미지는 Spring Boot의 ApiClient를 거쳐 FastAPI 서버에 전달되며, Stable Diffusion과 ControlNet을 통해 동화 삽화가 생성된다.<br> - FastAPI 서버는 프론트엔드 요청과 백엔드 데이터 전달을 기반으로 OpenAI ChatGPT API를 호출하여 줄거리 및 퀴즈를 생성하고, ElevenLabs TTS를 활용해 음성을 합성한다.<br> - 또한, Spring Boot에서 전달받은 S3 이미지 URL을 활용해 YOLOv8 객체 탐지 모델이 실행되며, 특정 객체의 좌표(x, y)를 반환한다. 이를 통해 해당 객체 이미지에 음성 메시지를 삽입하는 이스터에그 기능이 수행된다.<br> - 전체 AI 서빙은 FastAPI 기반 AI 서버에서 운영되며, 이미지 생성·객체 탐지·텍스트 생성·음성 합성이 유기적으로 연동되어 백엔드 및 데이터베이스에 실시간으로 저장된다.<br><br>|
+| (2) 전체 시스템 구성 | 시스템 구조도 <br> 1) Front-End <br> - React로 웹페이지를 제작하고 언어는 JavaScript를 사용한다. <br> - 용이한 라우팅을 위해 React-Router로 백엔드와 API 통신을 한다. <br><br> 2) Back-End <br> **개발 환경**<br> - 개발 언어: Java 17 <br> - 메인 프레임워크: Spring Boot 3.1.4 <br><br> **상세 기술 스택 및 라이브러리**<br>   - API 문서화: Swagger (Springdoc OpenAPI 2.1.0). API 명세 자동화 및 Swagger UI 제공.<br>   - 데이터 영속성: JPA (Spring Data JPA 3.1.4), MySQL Connector 사용.<br>   - 캐싱/NoSQL: Redis (Spring Data Redis 3.1.4). 고성능 데이터 캐싱 및 세션 관리.<br>   - 보안 & 인증: Spring Security 3.1.4, OAuth 2.0, JWT (JJWT 0.12.5)를 사용한 토큰 기반 인증.<br>   - 클라우드: Spring Cloud AWS 2.2.6.RELEASE. AWS 서비스(S3, RDB) 연동.<br>   - 유효성 검증: `spring-boot-starter-validation 3.1.4`<br><br> 3) AI <br> - AI 시스템은 Python 언어와 Numpy 기반으로 개발되었다.<br> - 프론트엔드에서 업로드된 이미지는 Spring Boot의 ApiClient를 거쳐 FastAPI 서버에 전달되며, Stable Diffusion과 ControlNet을 통해 동화 삽화가 생성된다.<br> - FastAPI 서버는 프론트엔드 요청과 백엔드 데이터 전달을 기반으로 OpenAI ChatGPT API를 호출하여 줄거리 및 퀴즈를 생성하고, ElevenLabs TTS를 활용해 음성을 합성한다.<br> - 또한, Spring Boot에서 전달받은 S3 이미지 URL을 활용해 YOLOv8 객체 탐지 모델이 실행되며, 특정 객체의 좌표(x, y)를 반환한다. 이를 통해 해당 객체 이미지에 음성 메시지를 삽입하는 이스터에그 기능이 수행된다.<br> - 전체 AI 서빙은 FastAPI 기반 AI 서버에서 운영되며, 이미지 생성·객체 탐지·텍스트 생성·음성 합성이 유기적으로 연동되어 백엔드 및 데이터베이스에 실시간으로 저장된다.<br><br>|
+
 | (3) 주요 엔진 및 기능 설계 | 주요 엔진 <br><br> 시나리오 |
-| (4) 주요 기능의 구현 |  |
-| (5) 기타 | 공모전/수상 여부 |  |
+| (4) 주요 기능의 구현 |  |
+| (5) 기타 | 공모전/수상 여부 |  |
